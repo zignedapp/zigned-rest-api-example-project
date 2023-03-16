@@ -1,0 +1,135 @@
+::-moz-placeholder {
+    opacity: .3;
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+:-ms-input-placeholder {
+    opacity: .3;
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+::placeholder {
+    opacity: .3;
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+label {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--medium-gray-color);
+    margin-bottom:1rem;
+}
+
+
+input {
+    border: 1px solid var(--light-color);
+    background: var(--light-color);
+    padding: 1rem 1.25rem;
+    border-radius: .75rem;
+    font-size: 1.25rem;
+    color: var(--medium-gray-color);
+    transition: all .2s ease-in-out;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    
+}
+
+input:disabled, button:disabled {
+    opacity: .5;
+    
+}
+
+input.error {
+    background: var(--danger-faded-color);
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+input.error:focus {
+    border-color: var(--primary-color);
+}
+
+input.success {
+    background: var(--secondary-faded-color);
+    color: var(--secondary-dark-color);
+    border-color: var(--secondary-dark-color);
+}
+
+input.success:focus {
+    border-color: var(--primary-color);
+}
+
+.input-wrapper {
+    margin-bottom: 2rem;
+}
+
+button {
+    background: var(--primary-color);
+    padding: 1rem 1.25rem;
+    font-weight: 500;
+    border-radius: .75rem;
+    font-size: 1.25rem;
+    border: none;
+    color: white;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:focus-visible {
+    outline: var(--primary-bright-color) solid 3px;
+}
+
+.error-msg {
+    color: var(--danger-color);
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.form-wrapper {
+    padding-bottom: 6rem;
+    width: 576px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+@media (max-width: 576px) {
+    .form-wrapper {
+    padding: 1rem 0;
+    }
+}
+
+.submit-button-wrapper {
+    margin-top: 3rem;
+}
+
+label {
+    transition: opacity .2s ease-in-out;
+}
+
+label.disabled {
+    opacity: .5
+}

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+    --primary-color: #3B3BF1;
+    --primary-bright-color: #8888f7;
+    --primary-dark-color: #0c0cb0;
+    --secondary-light-color: #5dc5a9;
+    --secondary-dark-color: #48a9a6;
+    --secondary-faded-color: #fafffa;
+    --dark-color: #0c2130;
+    --light-color: #f5f9fc;
+    --danger-color: #d34f52;
+    --danger-faded-color: #ffe5e5;
+    --medium-gray-color: #6a747f;
+    --border-radius-small: .5rem;
+    --border-radius: 1rem;
+    --border-radius-big: 2rem;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.app-wrapper {
+    height:100%;
+    width: 100%;
+}
+
+.index-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.index-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .15rem;
+    align-self: start;  
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    position: relative;
+}
+
+.button-link>.inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem .75rem;
+    border-radius: .9rem;
+    width: 100%;
+    height:100%;
+}
+
+.button-link.big>.inner {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+.button-link.light {
+    color: var(--primary-color);
+    
+    -webkit-animation: 5s ease infinite normal none running gradient;
+    animation: 5s ease infinite normal none running gradient; 
+}
+
+.button-link.light.outline {
+    color: var(--light-color);
+    border: 2px solid rgba(255,255,255,0.6);
+    box-shadow: inset 0 0 0.8em rgba(255,255,255,0.3), 0 0 0.8em rgba(255,255,255,0.3);
+    padding: 0;
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
+    /*overflow: hidden;*/
+    
+    position:relative;
+}
+
+.button-link.light.outline:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background:none;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    -webkit-animation: 2000ms ease-in-out infinite normal none running border;
+            animation: 2000ms ease-in-out infinite normal none running border;
+}
+
+
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-webkit-keyframes outline {
+	0% {
+		outline-offset: 0;
+        outline-color:rgba(255,255,255,0.0); 
+	}
+	50% {
+		outline-color:rgba(255,255,255,0.2); 
+	}
+	100% {
+		outline-offset: 64px;
+        outline-color:rgba(255,255,255,0.0); 
+	}
+}
+
+@keyframes outline {
+	0% {
+		outline-offset: 0;
+        outline-color:rgba(255,255,255,0.0); 
+	}
+	50% {
+		outline-color:rgba(255,255,255,0.2); 
+	}
+	100% {
+		outline-offset: 64px;
+        outline-color:rgba(255,255,255,0.0); 
+	}
+}
+
+@-webkit-keyframes border {
+	0% {
+        width:100%;
+        height:100%;
+        border-color:rgba(255,255,255,0.0); 
+	}
+	50% {
+		border-color:rgba(255,255,255,0.2); 
+	}
+	100% {
+		width: calc(100% + 24px);
+		height: calc(100% + 24px);
+        border-color:rgba(255,255,255,0.0); 
+	}
+}
+
+@keyframes border {
+	0% {
+        width:100%;
+        height:100%;
+        border-color:rgba(255,255,255,0.0); 
+	}
+	50% {
+		border-color:rgba(255,255,255,0.2); 
+	}
+	100% {
+		width: calc(100% + 24px);
+		height: calc(100% + 24px);
+        border-color:rgba(255,255,255,0.0); 
+	}
+}
+
+.button-link.light>.inner {
+    background: var(--light-color);
+    color: var(--primary-color);
+}
+
+.button-link.light.outline>.inner {
+    background: none;
+    background: rgba(255,255,255,0.2);
+    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,.05) 35%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,.05) 100%);
+    background-size: 200% 200%;
+    border-radius: 50%;
+    color: inherit;
+}
+
+.button-link.dark {
+    background: rgba(12, 33, 48,.5);
+    color: var(--light-color);
+    border: 1px solid var(--dark-color);
+}
+
+
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.index-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow:1;
+}
+
+.index-titles {
+    display: flex;
+    flex-direction: column;
+    color: var(--light-color);
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 500px;
+    line-height: 1.2;
+}
+
+.index-titles>h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.index-titles>h2 {
+    color: rgba(255,255,255,0.8);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
