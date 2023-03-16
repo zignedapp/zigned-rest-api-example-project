@@ -7,7 +7,7 @@ Zigned was invited to an event with a carnival theme. Our display invited visito
 
 # Notes
 
-The app is a PWA built with Remix as it needed to run full screen on an iPad. If you are just looking for the API integration, look in the lib/zigned-api.server.ts for the code. If you want to see the full integration in the app, look in routes/_guess/_guess.tsx and locate the "action"-function at the top.
+The app is a PWA built with Remix as it needed to run full screen on an iPad. If you are just looking for the API integration, look in the lib/zigned-api.server.ts for the code. If you want to see the full integration in the app, look in routes/_guess/guess.tsx and locate the "action"-function at the top.
 This is a simplified example which means you might want to add additional things such as error handling if you are deploying to production.
 
 
